@@ -1,0 +1,13 @@
+box: wercker/nodejs
+services:
+  - wercker/mongodb
+build:
+  steps:
+    - npm-install
+    - npm-test
+  after-steps:
+    - wouter/irc-notify:
+        server: irc.freenode.net
+        port: 6667
+        nickname: seikyo-backend
+        channel: seikyo-backend-dev

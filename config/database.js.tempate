@@ -1,0 +1,6 @@
+module.exports = {
+    db: 'database',
+    host: 'localhost',
+    pwd: 'password',
+    user: 'user'
+};
